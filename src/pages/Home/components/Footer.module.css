@@ -1,0 +1,15 @@
+.footer {
+	user-select: none;
+	background: #081855;
+	padding: 28px 0px;
+}
+
+.footerDes {
+	display: flex;
+	justify-content: space-around;
+	font-family: PingFangSC-Medium;
+	font-size: 14px;
+	color: #bfbfbf;
+	letter-spacing: 0;
+	text-align: center;
+}

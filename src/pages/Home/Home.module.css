@@ -1,0 +1,79 @@
+:global(body) {
+  margin: 0;
+  padding: 0;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global(.ant-spin-nested-loading > div > .ant-spin) {
+  max-height: 100%;
+}
+
+.mainContainer {
+  width: 100%;
+  overflow: hidden auto;
+  background-color: transparent;
+  margin: 0 auto;
+}
+
+.mainContainerWithBg {
+  composes: mainContainer;
+}
+
+.mainContainerWithBg2 {
+  composes: mainContainer;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  margin: 0px;
+  min-height: 100vh;
+  -webkit-transition: all 0.2s linear, ease;
+  transition: all 0.2s linear, ease;
+  flex-direction: column;
+}
+
+.mainContainerWithBg .container {
+  background: #0000 url('../../assets/banner.png') no-repeat scroll center -2px;
+  background-size: 100% 770px;
+}
+
+.mainContainerWithBg2 .container {
+  background: linear-gradient(
+    to bottom,
+    rgba(235, 255, 253, 1) 2%,
+    rgba(235, 241, 253, 1) 29%,
+    rgba(183, 207, 253, 1) 100%
+  );
+}
+
+.headerRow {
+}
+
+.content {
+  display: flex;
+  margin: 0px;
+  flex: 1;
+}
+
+.contentBody {
+  width: 100%;
+  text-align: center;
+  flex: auto;
+  background: #0000;
+}
+
+.bodyRow {
+  height: 100%;
+  background: #0000;
+}
+
+:global(.ant-notification-bottomLeft.ant-notification) {
+  width: auto;
+}
+
+.notification {
+}

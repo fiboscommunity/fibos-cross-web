@@ -1,0 +1,52 @@
+.loader {
+	/*width: calc(1em * 7 + 0.15em * 6);*/
+	/*height: 1.5em;*/
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.loader :global(span) {
+	/*width: 1em;*/
+	background-color: deepskyblue;
+	border-radius: 0.1em;
+	transform: skewX(-25deg) scale(0.1);
+	animation: animate 0.6s infinite alternate;
+	filter: opacity(0);
+	animation-delay: calc((var(--n) - 1) * 0.05s);
+}
+
+@keyframes animate {
+	to {
+		filter: opacity(1);
+		transform: skewX(-25deg) scale(1);
+	}
+}
+
+.loader :global(span):nth-child(1) {
+	--n: 1;
+}
+
+.loader :global(span):nth-child(2) {
+	--n: 2;
+}
+
+.loader :global(span):nth-child(3) {
+	--n: 3;
+}
+
+.loader :global(span):nth-child(4) {
+	--n: 4;
+}
+
+.loader :global(span):nth-child(5) {
+	--n: 5;
+}
+
+.loader :global(span):nth-child(6) {
+	--n: 6;
+}
+
+.loader :global(span):nth-child(7) {
+	--n: 7;
+}

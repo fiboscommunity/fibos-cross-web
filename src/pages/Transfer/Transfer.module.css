@@ -1,0 +1,340 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden auto;
+  background-color: transparent;
+  /* margin: 30px auto 0px auto; */
+  padding: 30px;
+  /* box-shadow: 0 2px 23px 0 rgba(72, 34, 235, 0.1); */
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  margin: 0px;
+  -webkit-transition: all 0.2s linear, ease;
+  transition: all 0.2s linear, ease;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  composes: row;
+  color: #1c57df;
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 44px;
+  padding: 0 0 21px;
+  cursor: default;
+}
+
+.supportTips {
+  composes: row;
+  color: #1c57df;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 200;
+  margin: 0 auto;
+  padding: 8px 0 20px;
+  cursor: default;
+}
+
+.netWarning {
+  composes: row;
+  height: 21px;
+  margin: 10px 0px 5px 0px;
+  color: #f00;
+  cursor: default;
+  user-select: none;
+}
+
+.mapStatusWarning {
+  composes: row;
+  height: 21px;
+  margin: 10px 0px 20px 0px;
+  color: #1737ee;
+  cursor: default;
+  user-select: none;
+}
+
+.accountWrapper {
+  composes: row;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 750px;
+  height: 48px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 50px;
+  background: #fff;
+  text-align: center;
+  color: #677897;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.input :global(.ant-input) {
+  border: none;
+  outline: none;
+  padding-right: 60px;
+}
+
+.input :global(.ant-input:focus) {
+  outline: none;
+  box-shadow: none;
+}
+
+:global(.has-error) .input:global(.ant-input-affix-wrapper .ant-input:focus) {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.input :global(.ant-input-affix-wrapper .ant-input:not(:last-child)) {
+  padding-right: 48px;
+}
+
+.input :global(.ant-input-suffix) {
+  right: 46px;
+  display: flex;
+}
+
+.suffix {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+
+:global(.ant-input-affix-wrapper .ant-input-prefix :not(.anticon)),
+:global(.ant-input-affix-wrapper .ant-input-suffix :not(.anticon)) {
+  line-height: 0;
+}
+
+.accountInput {
+  composes: input;
+  box-shadow: 0 2px 18px rgba(143, 178, 246, 1);
+  padding: 0px 80px;
+}
+
+.accountInput:global(.ant-input-affix-wrapper .ant-input:not(:last-child)) {
+  padding-right: 60px;
+}
+
+.accountInput :global(.ant-input-suffix) {
+  right: 120px;
+}
+
+.foTips {
+  composes: row;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0px;
+}
+
+.foTipsText a {
+  color: #1c57df;
+  text-decoration: none;
+  outline: 0;
+}
+
+.amountWrapper {
+  composes: row;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.amountForm {
+  margin-top: 30px;
+}
+
+.amountInput {
+  composes: input;
+  padding: 0px 10px;
+  padding-right: 80px;
+  padding-right: 20px;
+}
+
+.amountInput:global(.ant-input-group-wrapper) {
+  box-shadow: 0 2px 18px rgba(143, 178, 246, 1);
+}
+
+.amountInput:global(.ant-input-affix-wrapper) {
+  padding-left: 80px;
+}
+
+.amountInput :global(.ant-input-group-addon) {
+  border: none;
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+.feeWrapper {
+  composes: row;
+}
+
+.feeWrapperTitle {
+  composes: row;
+  width: 100px;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.fee {
+  display: flex;
+  width: 750px;
+  margin: 0px auto;
+}
+
+.feeCard {
+  width: 33%;
+  margin: 0px 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 2px solid #d1d1d1;
+  cursor: pointer;
+  user-select: none;
+  background-color: #fff;
+}
+
+.feeCard.selected {
+  border: 2px solid #1c57df;
+}
+
+.feeCard:first-child {
+  margin-left: 0px;
+}
+
+.feeCard:last-child {
+  margin-right: 0px;
+}
+
+.rightPicWrapper {
+  position: absolute;
+  right: -10px;
+  bottom: -12px;
+  display: none;
+}
+
+.feeCard.selected .rightPicWrapper {
+  display: block;
+}
+
+.rightPic {
+  width: 30px;
+}
+
+.feeCardRow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.slow {
+  composes: feeCard;
+}
+
+.average {
+  composes: feeCard;
+}
+
+.fast {
+  composes: feeCard;
+}
+
+.feeTitle {
+  composes: feeCardRow;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feeDurtionWrapper {
+  composes: feeCardRow;
+  display: flex;
+}
+
+.feeDurtion {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.feeDurtionSuffix {
+  padding-right: 30px;
+  text-align: left;
+  width: 60px;
+}
+
+.feeAmountWrapper {
+  composes: feeCardRow;
+  display: flex;
+}
+
+.feeAmount {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.feeAmountSuffix {
+  padding-right: 30px;
+  text-align: left;
+  width: 60px;
+}
+
+.btnWrapper {
+  composes: row;
+}
+
+.btn {
+  padding: 13px 26px;
+  box-shadow: 0 8px 10px rgba(143, 178, 246, 0.7);
+  line-height: 22px;
+  border-radius: 50px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  background: #1c57df;
+  height: 48px;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: none;
+  -webkit-appearance: button;
+  overflow: visible;
+  margin: 0;
+  outline: none;
+  margin-bottom: 40px;
+  margin-top: 65px;
+  width: 160px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.active {
+  background: #1c57df;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(143, 178, 246, 1);
+}
+
+.tips {
+  composes: row;
+  user-select: none;
+}

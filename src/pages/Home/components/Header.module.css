@@ -1,0 +1,173 @@
+.menuWrapper {
+	line-height: 63px;
+	font-size: 18px;
+	border: none;
+}
+
+.header {
+	width: 100%;
+	height: 78px;
+	user-select: none;
+	background-color: transparent;
+	padding: 0px 120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* box-shadow: 0 2px 23px 0 rgba(72, 34, 235, 0.1); */
+	flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+	.header {
+		padding: 0px 10px;
+	}
+}
+
+.header_transparent {
+	composes: header;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.headerLogoContainer {
+	display: flex;
+}
+
+.headerLogo {
+	display: flex;
+	margin-right: 20px;
+}
+
+.logo {
+	width: 45px;
+	height: 53px;
+	margin: auto;
+}
+
+.logo :global(svg) {
+	height: 100%;
+	width: 100%;
+}
+
+.header .logo :global(svg) {
+	color: #000000;
+}
+
+.header_transparent .logo :global(svg) {
+	color: #ffffff;
+}
+
+.headerLogoText {
+	font-family: PingFangSC-Semibold;
+	font-size: 34px;
+	letter-spacing: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header .headerLogoText {
+	color: #000000;
+}
+
+.header_transparent .headerLogoText {
+	color: #ffffff;
+}
+
+.headerMenuWrapper {
+	display: flex;
+}
+
+.menu {
+}
+
+.menu > :global(li) {
+	height: 100%;
+}
+
+.menu :global(.ant-menu-item) {
+	border: none;
+}
+
+.menu :global(.ant-menu-item div) {
+	font-family: PingFangSC-Regular;
+	font-size: 24px;
+	color: #999999;
+	letter-spacing: 0;
+	text-align: center;
+	margin: 27px 0px;
+	line-height: 1;
+}
+
+.header .menu :global(.ant-menu-item div) {
+	color: #000000;
+}
+
+.header_transparent .menu :global(.ant-menu-item div) {
+	color: #999999;
+}
+
+.header .menu :global(.ant-menu-item.ant-menu-item-selected div) {
+	color: #2659ff;
+}
+
+.header_transparent .menu :global(.ant-menu-item.ant-menu-item-selected div) {
+	color: #ffffff;
+}
+
+.langWrapper {
+	display: flex;
+	cursor: not-allowed;
+}
+
+.langText {
+	font-family: PingFangSC-Regular;
+	font-size: 24px;
+	letter-spacing: 0;
+	text-align: center;
+	margin: 27px 0px 27px 15px;
+	line-height: 1;
+}
+
+.header .langText {
+	color: #000000;
+}
+
+.header_transparent .langText {
+	color: #999999;
+}
+
+.dropdownIconWrapper {
+	height: 100%;
+	display: flex;
+}
+
+.dropdownIcon {
+	font-size: 24px;
+	margin: auto 20px;
+}
+
+.header .dropdownIcon {
+	color: #000000;
+}
+
+.header_transparent .dropdownIcon {
+	color: #999999;
+}
+
+.dropdownOverlay {
+	width: 100%;
+}
+
+.dropdown {
+}
+
+.dropdown .menu :global(.ant-menu-item div) {
+	font-size: 14px;
+	margin: 13px 0px;
+}
+
+.dropdown :global(.ant-drawer-body) {
+	padding: 20px;
+}
